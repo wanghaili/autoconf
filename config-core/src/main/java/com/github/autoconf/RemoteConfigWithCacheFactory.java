@@ -12,7 +12,7 @@ import java.nio.file.Path;
 
 /**
  * 只拉取zookeeper配置的工厂类
- * Created by lirui on 2015-10-01 22:25.
+ * Created by harry on 2015-10-01 22:25.
  */
 public class RemoteConfigWithCacheFactory extends RemoteConfigFactory {
   private final Path path;

@@ -3,7 +3,7 @@ package com.github.autoconf.entity;
 /**
  * 配置对象
  *
- * Created by lirui on 15/1/10.
+ * Created by harry on 15/1/10.
  */
 public class ConfigHistory extends Config {
   private long configId;

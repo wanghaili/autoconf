@@ -1,6 +1,6 @@
 package com.github.autoconf.shiro;
 
-import com.github.autoconf.service.CacheService;
+import com.github.autoconf.service.ICacheService;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.ExcessiveAttemptsException;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class RetryLimitCredentialsMatcher extends HashedCredentialsMatcher {
   @Autowired
-  private CacheService cacheService;
+  private ICacheService cacheService;
 
   @Override
   public boolean doCredentialsMatch(AuthenticationToken token, AuthenticationInfo info) {

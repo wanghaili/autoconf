@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 测试工具类
- * Created by lirui on 2015-10-03 11:04.
+ * Created by harry on 2015-10-03 11:04.
  */
 public class TestHelper {
   private static final Logger LOG = LoggerFactory.getLogger(TestHelper.class);

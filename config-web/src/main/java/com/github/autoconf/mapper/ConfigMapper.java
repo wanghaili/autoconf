@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 访问config对象
  *
- * Created by lirui on 2015/1/10.
+ * Created by harry on 2015/1/10.
  */
 public interface ConfigMapper {
   @Select("SELECT * FROM config WHERE name=#{name} AND profile=#{profile}")

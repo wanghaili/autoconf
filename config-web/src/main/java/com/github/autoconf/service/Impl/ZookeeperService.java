@@ -1,9 +1,12 @@
-package com.github.autoconf.service;
+package com.github.autoconf.service.Impl;
 
 import com.github.autoconf.entity.Config;
 import com.github.autoconf.entity.ConfigHistory;
 import com.github.autoconf.helper.ConfigHelper;
 import com.github.autoconf.helper.ZookeeperUtil;
+import com.github.autoconf.service.IConfigHistoryService;
+import com.github.autoconf.service.IConfigService;
+import com.github.autoconf.service.IZookeeperService;
 import com.google.common.base.Charsets;
 import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
@@ -29,15 +32,15 @@ import java.util.List;
 /**
  * 异步发布配置到zookeeper服务器
  *
- * Created by lirui on 15/2/9.
+ * Created by harry on 15/2/9.
  */
-@Service
-public class ZookeeperService {
+@Service("zookeeperService")
+public class ZookeeperService implements IZookeeperService{
   private Logger log = LoggerFactory.getLogger(ZookeeperService.class);
   @Autowired
-  private ConfigService configService;
+  private IConfigService configService;
   @Autowired
-  private ConfigHistoryService historyService;
+  private IConfigHistoryService historyService;
   @Value("${zookeeper.authenticationType}")
   private String authType = "digest";
   @Value("${zookeeper.authentication}")
@@ -66,6 +69,7 @@ public class ZookeeperService {
   /**
    * 发布配置，需要：备份原配置，保存新内容，发布到zookeeper。
    */
+  @Override
   public void cpZookeeper(Config config) {
     clearCache();
 
@@ -111,6 +115,7 @@ public class ZookeeperService {
   /**
    * 删除配置，把内容清空，存到history中，从zookeeper删除对应内容
    */
+  @Override
   public void rmZookeeper(Config config) {
     clearCache();
 

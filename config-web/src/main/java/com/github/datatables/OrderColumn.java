@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 排序字段
- * Created by lirui on 15/2/8.
+ * Created by harry on 15/2/8.
  */
 public class OrderColumn implements Serializable {
   private int column;

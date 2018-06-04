@@ -7,7 +7,7 @@ import jetbrick.util.StringEscapeUtils;
 /**
  * 为已有java类型添加扩展功能，类似于js修改prototype
  *
- * Created by lirui on 2015/1/15.
+ * Created by harry on 2015/1/15.
  */
 @JetAnnotations.Methods
 public final class JetbickMethods {

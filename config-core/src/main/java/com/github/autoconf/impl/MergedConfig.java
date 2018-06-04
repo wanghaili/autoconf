@@ -20,7 +20,7 @@ import java.util.Map;
  * 1. 仅支持kv类型的合并
  * 2. 仅支持UTF8编码
  * </pre>
- * Created by lirui on 15/9/24.
+ * Created by harry on 15/9/24.
  */
 public class MergedConfig extends ChangeableConfig implements IChangeableConfig {
   private final List<IChangeableConfig> configs;

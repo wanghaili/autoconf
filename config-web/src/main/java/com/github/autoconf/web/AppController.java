@@ -1,8 +1,8 @@
 package com.github.autoconf.web;
 
 import com.github.autoconf.entity.ConfigHistory;
-import com.github.autoconf.service.ConfigHistoryService;
-import com.github.autoconf.service.ConfigService;
+import com.github.autoconf.service.IConfigHistoryService;
+import com.github.autoconf.service.IConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,14 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * 默认页面
- * Created by lirui on 2014/10/13.
+ * Created by harry on 2014/10/13.
  */
 @Controller
 public class AppController {
   @Autowired
-  private ConfigHistoryService historyService;
+  private IConfigHistoryService historyService;
   @Autowired
-  private ConfigService configService;
+  private IConfigService configService;
 
   @RequestMapping(value = {"/", "/home"})
   public String home() {

@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * 解析配置信息，并提供便捷的获取方法
- * Created by lirui on 15/9/24.
+ * Created by harry on 15/9/24.
  */
 public interface IConfig {
   /**

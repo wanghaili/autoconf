@@ -13,7 +13,7 @@ import java.nio.file.Path;
 
 /**
  * 本地配置工厂
- * Created by lirui on 2015-09-30 22:25.
+ * Created by harry on 2015-09-30 22:25.
  */
 public class LocalConfigFactory extends AbstractConfigFactory {
   private static final Logger LOG = LoggerFactory.getLogger(LocalConfigFactory.class);

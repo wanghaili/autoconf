@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 /**
  * 配置基类
- * Created by lirui on 2015/9/24.
+ * Created by harry on 2015/9/24.
  */
 public class ChangeableConfig extends Config implements IChangeableConfig {
   private final String name;

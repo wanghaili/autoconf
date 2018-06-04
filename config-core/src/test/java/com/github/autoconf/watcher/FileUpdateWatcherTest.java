@@ -17,7 +17,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试本地配置内容修改触发回调功能
- * Created by lirui on 2015-09-29 15:12.
+ * Created by harry on 2015-09-29 15:12.
  */
 public class FileUpdateWatcherTest {
   private static final Logger LOG = LoggerFactory.getLogger(FileUpdateWatcherTest.class);

@@ -22,7 +22,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 /**
  * 测试用例
  * <p/>
- * Created by lirui on 15/2/26.
+ * Created by harry on 15/2/26.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:applicationContext.xml"})
@@ -58,11 +58,11 @@ public class ReloadableTest {
     assertThat(article.getTitle(), is("config title"));
     assertThat(article.getDynamic(), is("dynamicContent"));
 
-    setVariable("lirui");
+    setVariable("harry");
     Thread.sleep(3000);
 
-    assertThat(article.getAuthor(), is("lirui"));
-    assertThat(article.getContent(), is("hello lirui, welcome"));
+    assertThat(article.getAuthor(), is("harry"));
+    assertThat(article.getContent(), is("hello harry, welcome"));
     setVariable("colinli");
   }
 }

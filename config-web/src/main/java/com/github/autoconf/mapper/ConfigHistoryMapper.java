@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 访问config对象
  *
- * Created by lirui on 2015/1/10.
+ * Created by harry on 2015/1/10.
  */
 public interface ConfigHistoryMapper {
   @Select("SELECT * FROM config_history ORDER BY id DESC LIMIT 500")

@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 基于远程zookeeper文件的配置
- * Created by lirui on 2015/9/28.
+ * Created by harry on 2015/9/28.
  */
 public class RemoteConfig extends ChangeableConfig {
   private static final Logger LOG = LoggerFactory.getLogger(RemoteConfig.class);

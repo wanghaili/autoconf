@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * 单个数据列
  *
- * Created by lirui on 15/2/8.
+ * Created by harry on 15/2/8.
  */
 public class DataColumn implements Serializable {
   private String data;

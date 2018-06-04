@@ -17,7 +17,7 @@ import static java.nio.file.StandardWatchEventKinds.*;
 
 /**
  * 监测本地目录的文件变更
- * Created by lirui on 2015-09-29 14:38.
+ * Created by harry on 2015-09-29 14:38.
  */
 public class FileUpdateWatcher implements Runnable {
   private static final Logger LOG = LoggerFactory.getLogger(FileUpdateWatcher.class);

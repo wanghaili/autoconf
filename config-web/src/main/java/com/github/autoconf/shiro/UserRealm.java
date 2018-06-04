@@ -1,7 +1,7 @@
 package com.github.autoconf.shiro;
 
 import com.github.autoconf.entity.User;
-import com.github.autoconf.service.UserService;
+import com.github.autoconf.service.IUserService;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -12,11 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * 用户身份及权限认证
- * Created by lirui on 2015-10-04 18:13.
+ * Created by harry on 2015-10-04 18:13.
  */
 public class UserRealm extends AuthorizingRealm {
   @Autowired
-  private UserService userService;
+  private IUserService userService;
 
   @Override
   protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {

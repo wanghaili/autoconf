@@ -26,7 +26,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 验证本地cache等功能
- * Created by lirui on 2015-09-30 18:56.
+ * Created by harry on 2015-09-30 18:56.
  */
 public class RemoteConfigWithCacheTest {
   private static TestingServer server;

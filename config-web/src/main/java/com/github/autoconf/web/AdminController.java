@@ -3,9 +3,9 @@ package com.github.autoconf.web;
 import com.github.autoconf.entity.Config;
 import com.github.autoconf.entity.ConfigHistory;
 import com.github.autoconf.entity.ReplaceRequest;
-import com.github.autoconf.service.ConfigHistoryService;
-import com.github.autoconf.service.ConfigService;
-import com.github.autoconf.service.ZookeeperService;
+import com.github.autoconf.service.IConfigHistoryService;
+import com.github.autoconf.service.IConfigService;
+import com.github.autoconf.service.IZookeeperService;
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
@@ -35,18 +35,18 @@ import java.util.Set;
 /**
  * 创建/修改/删除等操作
  *
- * Created by lirui on 2015/2/8.
+ * Created by harry on 2015/2/8.
  */
 @Controller
 public class AdminController {
   private Logger log = LoggerFactory.getLogger(AdminController.class);
 
   @Autowired
-  private ConfigService configService;
+  private IConfigService configService;
   @Autowired
-  private ConfigHistoryService historyService;
+  private IConfigHistoryService historyService;
   @Autowired
-  private ZookeeperService zookeeperService;
+  private IZookeeperService zookeeperService;
 
   @RequestMapping(value = "/create/config/", method = RequestMethod.GET)
   public String createConfig() {

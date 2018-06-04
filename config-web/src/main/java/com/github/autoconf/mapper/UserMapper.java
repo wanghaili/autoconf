@@ -11,7 +11,7 @@ import java.util.List;
 
 /**
  * 用户相关操作
- * Created by lirui on 2015-10-04 19:11.
+ * Created by harry on 2015-10-04 19:11.
  */
 @Repository
 public interface UserMapper {

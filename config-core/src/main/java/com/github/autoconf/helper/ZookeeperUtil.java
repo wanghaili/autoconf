@@ -12,7 +12,7 @@ import java.util.List;
 
 /**
  * zookeeper工具类
- * Created by lirui on 2015-09-29 11:05.
+ * Created by harry on 2015-09-29 11:05.
  */
 public class ZookeeperUtil {
   public static final Charset UTF8 = Charset.forName("UTF-8");

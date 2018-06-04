@@ -27,7 +27,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * zookeeper配置
- * Created by lirui on 2015-09-29 20:37.
+ * Created by harry on 2015-09-29 20:37.
  */
 public class RemoteConfigTest {
   private static final Logger LOG = LoggerFactory.getLogger(RemoteConfigTest.class);

@@ -2,7 +2,7 @@ package com.github.autoconf.api;
 
 /**
  * 获取配置的工厂类
- * Created by lirui on 2015/9/23.
+ * Created by harry on 2015/9/23.
  */
 public interface IConfigFactory {
   /**

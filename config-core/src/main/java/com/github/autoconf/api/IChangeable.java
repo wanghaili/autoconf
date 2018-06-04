@@ -2,7 +2,7 @@ package com.github.autoconf.api;
 
 /**
  * 配置更改回调功能
- * Created by lirui on 15/9/24.
+ * Created by harry on 15/9/24.
  */
 public interface IChangeable {
   /**

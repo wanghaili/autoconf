@@ -1,7 +1,8 @@
-package com.github.autoconf.service;
+package com.github.autoconf.service.Impl;
 
 import com.github.autoconf.entity.User;
 import com.github.autoconf.mapper.UserMapper;
+import com.github.autoconf.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -11,10 +12,10 @@ import java.util.List;
 
 /**
  * 用户相关服务
- * Created by lirui on 2015-10-04 18:17.
+ * Created by harry on 2015-10-04 18:17.
  */
-@Service
-public class UserService {
+@Service("userService")
+public class UserService implements IUserService{
   @Autowired
   private UserMapper mapper;
 

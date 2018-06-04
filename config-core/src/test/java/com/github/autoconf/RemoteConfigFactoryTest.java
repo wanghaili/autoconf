@@ -20,7 +20,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试工厂类
- * Created by lirui on 2015-10-01 23:01.
+ * Created by harry on 2015-10-01 23:01.
  */
 public class RemoteConfigFactoryTest {
   private static TestingServer server;

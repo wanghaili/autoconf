@@ -22,7 +22,7 @@ import java.util.Set;
  * 2.同时启动异步线程检查远程zookeeper的配置.
  * 3.远程zookeeper改动内容会同步些往本地文件缓存.
  * </pre>
- * Created by lirui on 2015/9/30.
+ * Created by harry on 2015/9/30.
  */
 public class RemoteConfigWithCache extends RemoteConfig {
   private static final Logger LOG = LoggerFactory.getLogger(RemoteConfigWithCache.class);

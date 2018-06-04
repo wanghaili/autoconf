@@ -12,7 +12,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试EventBus
- * Created by lirui on 2015-09-28 17:05.
+ * Created by harry on 2015-09-28 17:05.
  */
 public class EventBusTest {
   @Test

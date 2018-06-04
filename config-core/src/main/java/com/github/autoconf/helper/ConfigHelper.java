@@ -23,7 +23,7 @@ import static com.github.autoconf.helper.ZookeeperUtil.newBytes;
 
 /**
  * 基础工具类
- * Created by lirui on 2015-10-01 19:38.
+ * Created by harry on 2015-10-01 19:38.
  */
 public class ConfigHelper {
   private ConfigHelper() {

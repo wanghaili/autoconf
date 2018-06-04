@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 /**
  * 搜索字段
  *
- * Created by lirui on 15/2/8.
+ * Created by harry on 15/2/8.
  */
 public class SearchColumn implements Serializable {
   private String value;

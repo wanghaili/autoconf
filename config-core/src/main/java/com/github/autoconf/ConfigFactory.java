@@ -11,7 +11,7 @@ import java.nio.file.Path;
 
 /**
  * 工厂类
- * Created by lirui on 2015-10-05 08:07.
+ * Created by harry on 2015-10-05 08:07.
  */
 public class ConfigFactory {
   private ConfigFactory() {

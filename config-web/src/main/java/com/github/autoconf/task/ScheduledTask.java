@@ -1,7 +1,7 @@
 package com.github.autoconf.task;
 
 import com.github.autoconf.entity.User;
-import com.github.autoconf.service.UserService;
+import com.github.autoconf.service.IUserService;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -15,7 +15,7 @@ import java.util.List;
 
 /**
  * 定时任务
- * Created by lirui on 2015-10-04 19:33.
+ * Created by harry on 2015-10-04 19:33.
  */
 @Component
 public class ScheduledTask {
@@ -23,7 +23,7 @@ public class ScheduledTask {
   private static final DateTimeFormatter DTF = DateTimeFormat.forPattern("yyyy-MM-dd");
 
   @Autowired
-  private UserService userService;
+  private IUserService userService;
   /**
    * 扫描长期不活跃的账户,做锁定处理
    */

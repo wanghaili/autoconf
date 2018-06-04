@@ -7,7 +7,7 @@ import java.util.Set;
 /**
  * 替换配置内容的请求
  *
- * Created by lirui on 2015/03/02 上午10:44.
+ * Created by harry on 2015/03/02 上午10:44.
  */
 public class ReplaceRequest implements Serializable {
   @NotNull

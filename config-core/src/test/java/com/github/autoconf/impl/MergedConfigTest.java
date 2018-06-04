@@ -16,7 +16,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试多个配置合并
- * Created by lirui on 2015-09-28 19:21.
+ * Created by harry on 2015-09-28 19:21.
  */
 public class MergedConfigTest {
   @Test

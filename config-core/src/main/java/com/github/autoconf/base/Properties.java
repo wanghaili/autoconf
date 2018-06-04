@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 扩展map功能，可以获取不同类型的属性值
  *
- * Created by lirui on 15/9/28.
+ * Created by harry on 15/9/28.
  */
 public class Properties {
   private Map<String, String> m = ImmutableMap.of();

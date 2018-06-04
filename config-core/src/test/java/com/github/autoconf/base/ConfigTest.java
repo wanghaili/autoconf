@@ -10,7 +10,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试纯文本配置
- * Created by lirui on 2015-09-28 20:12.
+ * Created by harry on 2015-09-28 20:12.
  */
 public class ConfigTest {
   @Test

@@ -1,7 +1,7 @@
 package com.github.autoconf.web;
 
 import com.github.autoconf.entity.User;
-import com.github.autoconf.service.UserService;
+import com.github.autoconf.service.IUserService;
 import com.github.autoconf.shiro.PasswordHelper;
 import com.github.jetbrick.functions.ShiroFunctions;
 import com.google.common.base.Strings;
@@ -25,14 +25,14 @@ import java.util.List;
 
 /**
  * 业务主程
- * Created by lirui on 2015-10-04 13:35.
+ * Created by harry on 2015-10-04 13:35.
  */
 @Controller
 public class UserController {
   @Autowired
   private PasswordHelper passwordHelper;
   @Autowired
-  private UserService userService;
+  private IUserService userService;
 
   @RequestMapping("/login")
   public String login(Model model) {

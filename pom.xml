@@ -4,35 +4,37 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <name>auto-config</name>
-    <groupId>com.github.colin-lee</groupId>
-    <artifactId>auto-config</artifactId>
+    <groupId>com.yooli.config</groupId>
+    <artifactId>config-center</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <url>https://github.com/colin-lee/autoconf</url>
-    <description>a distributed config system, based on mysql &amp; zookeeper</description>
-    <licenses>
-        <license>
-            <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
     <modules>
         <module>config-core</module>
         <module>spring-support</module>
+        <module>config-web</module>
     </modules>
-    <scm>
-        <connection>scm:git:https://github.com/colin-lee/autoconf.git</connection>
-        <developerConnection>scm:git:https://github.com/colin-lee/autoconf.git</developerConnection>
-        <url>https://github.com/colin-lee/autoconf</url>
-    </scm>
     <properties>
-        <autoconf.version>1.0.0</autoconf.version>
+        <config.version>1.0.0</config.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <encoding>UTF-8</encoding>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-        <jdk.version>1.7</jdk.version>
+        <jdk.version>1.8</jdk.version>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://nexus.yooli-in.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://nexus.yooli-in.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -53,7 +55,7 @@
         <dependency>
             <groupId>org.apache.zookeeper</groupId>
             <artifactId>zookeeper</artifactId>
-            <version>3.4.6</version>
+            <version>3.4.11</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -272,126 +274,16 @@
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.8.2</version>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <skip>true</skip>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
-    <reporting>
-        <plugins>
-            <!-- checkstyle -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.16</version>
-            </plugin>
 
-            <!-- pmd -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.5</version>
-                <configuration>
-                    <aggregate>true</aggregate>
-                    <targetJdk>${jdk.version}</targetJdk>
-                </configuration>
-            </plugin>
-
-            <!-- 定义Site生成的Index -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>2.8.1</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>index</report>
-                            <report>summary</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-
-            <!-- site UT 插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>2.18.1</version>
-                <configuration>
-                    <aggregate>true</aggregate>
-                    <argLine>-Dfile.encoding=UTF-8</argLine>
-                </configuration>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <!-- 单测RUN一次，其它地方都可以用 -->
-                            <report>report-only</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
-
-            <!-- cobertura插件 -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>cobertura-maven-plugin</artifactId>
-                <version>2.7</version>
-            </plugin>
-
-            <!-- findbugs -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>findbugs-maven-plugin</artifactId>
-                <version>3.0.2</version>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>2.5.2</version>
-            </plugin>
-        </plugins>
-    </reporting>
-    <developers>
-        <developer>
-            <name>Li Rui</name>
-            <id>colin-lee</id>
-            <email>colinli (AT) vip.qq.com</email>
-            <roles>
-                <role>Developer</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
-    <profiles>
-        <profile>
-            <id>nexus-release</id>
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>nexus-release</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-                <repository>
-                    <id>nexus-release</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.5</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

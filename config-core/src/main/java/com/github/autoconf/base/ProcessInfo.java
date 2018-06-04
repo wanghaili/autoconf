@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 获取进程运行时信息
- * Created by lirui on 2015-09-28 20:34.
+ * Created by harry on 2015-09-28 20:34.
  */
 public class ProcessInfo {
   private String path;

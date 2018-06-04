@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * 服务端响应
- * Created by lirui on 2014/11/2.
+ * Created by harry on 2014/11/2.
  */
 public class DataResponse<T> implements Serializable {
   /**

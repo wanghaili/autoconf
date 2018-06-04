@@ -20,7 +20,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试工厂类
- * Created by lirui on 2015-09-30 22:49.
+ * Created by harry on 2015-09-30 22:49.
  */
 public class LocalConfigFactoryTest {
   private static final Logger LOG = LoggerFactory.getLogger(LocalConfigFactoryTest.class);

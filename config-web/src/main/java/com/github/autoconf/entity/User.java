@@ -10,7 +10,7 @@ import java.util.Set;
 
 /**
  * 用户
- * Created by lirui on 2015-10-04 18:20.
+ * Created by harry on 2015-10-04 18:20.
  */
 public class User {
   private static final Splitter SPLITTER = Splitter.on(',').trimResults().omitEmptyStrings();

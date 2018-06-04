@@ -11,7 +11,7 @@ import java.util.Set;
 
 /**
  * 消息总线，允许注册消息
- * Created by lirui on 15/9/24.
+ * Created by harry on 15/9/24.
  */
 public class EventBus implements IChangeable {
   private static final Logger LOG = LoggerFactory.getLogger(EventBus.class);

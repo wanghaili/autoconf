@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentMap;
 
 /**
  * 配置工厂抽象类
- * Created by lirui on 2015-09-30 22:25.
+ * Created by harry on 2015-09-30 22:25.
  */
 public abstract class AbstractConfigFactory implements IConfigFactory {
   private final ConcurrentMap<String, IChangeableConfig> m = Maps.newConcurrentMap();

@@ -10,7 +10,7 @@ import java.nio.file.Path;
 
 /**
  * 基于本地文件的配置
- * Created by lirui on 2015/9/23.
+ * Created by harry on 2015/9/23.
  */
 public class LocalConfig extends ChangeableConfig {
   private static final Logger LOG = LoggerFactory.getLogger(LocalConfig.class);

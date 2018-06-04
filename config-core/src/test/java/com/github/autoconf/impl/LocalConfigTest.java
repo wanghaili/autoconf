@@ -10,7 +10,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 本地文件配置
- * Created by lirui on 2015-09-28 19:55.
+ * Created by harry on 2015-09-28 19:55.
  */
 public class LocalConfigTest {
   @Test

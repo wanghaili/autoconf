@@ -2,8 +2,8 @@ package com.github.autoconf.web;
 
 import com.github.autoconf.entity.Config;
 import com.github.autoconf.entity.ConfigHistory;
-import com.github.autoconf.service.ConfigHistoryService;
-import com.github.autoconf.service.ConfigService;
+import com.github.autoconf.service.IConfigHistoryService;
+import com.github.autoconf.service.IConfigService;
 import com.github.datatables.*;
 import com.google.common.base.Strings;
 import com.google.common.collect.Iterables;
@@ -19,14 +19,14 @@ import java.util.*;
 
 /**
  * ajax请求处理器
- * Created by lirui on 15/2/8.
+ * Created by harry on 15/2/8.
  */
 @RestController
 public class AjaxController {
   @Autowired
-  private ConfigService configService;
+  private IConfigService configService;
   @Autowired
-  private ConfigHistoryService historyService;
+  private IConfigHistoryService historyService;
 
   @PostConstruct
   void fillCache() {

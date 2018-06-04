@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
 
 /**
  * 配置对象
- * Created by lirui on 15/1/10.
+ * Created by harry on 15/1/10.
  */
 public class Config {
   @Transient

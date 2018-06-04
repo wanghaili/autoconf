@@ -14,7 +14,7 @@ import java.util.Collection;
 /**
  * shiro扩展
  *
- * Created by lirui on 2015/1/16.
+ * Created by harry on 2015/1/16.
  */
 @JetAnnotations.Functions
 public final class ShiroFunctions {

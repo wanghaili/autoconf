@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 /**
  * 测试类注入
  * <p/>
- * Created by lirui on 2015/2/26.
+ * Created by harry on 2015/2/26.
  */
 public class Article {
   private String author;

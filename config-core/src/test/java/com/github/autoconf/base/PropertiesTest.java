@@ -10,7 +10,7 @@ import static org.junit.Assert.assertThat;
 
 /**
  * 测试获取各种类型数据
- * Created by lirui on 2015-09-28 17:59.
+ * Created by harry on 2015-09-28 17:59.
  */
 public class PropertiesTest {
   @Test
